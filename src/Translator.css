@@ -429,42 +429,61 @@
 /* Mobile (320px - 480px) */
 @media screen and (max-width: 480px) {
   .translator {
-    padding: var(--space-md);
-    align-items: flex-start;
-    padding-top: var(--space-xl);
+    padding: 0;
+    align-items: stretch;
+    height: 100dvh;
+    overflow: hidden;
   }
-  
+
   .translator__card {
-    padding: var(--space-lg);
-    border-radius: var(--radius-lg);
-  }
-  
-  .translator__title {
-    font-size: 1.5rem;
-    margin-bottom: var(--space-lg);
-  }
-  
-  .translator__toggle-group {
+    display: flex;
     flex-direction: column;
-    gap: var(--space-xs);
-  }
-  
-  .translator__toggle-label {
+    height: 100%;
+    max-width: 100%;
+    border-radius: 0;
     padding: var(--space-md);
-    font-size: 0.9375rem;
+    overflow: hidden;
   }
-  
+
+  .translator__title {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .translator__title::after {
+    font-size: 0.75rem;
+    margin-top: 0;
+  }
+
+  .translator__toggle-group {
+    margin-bottom: var(--space-sm);
+  }
+
+  .translator__toggle-label {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.875rem;
+  }
+
+  .translator__field-group {
+    flex: 1;
+    min-height: 0;
+    margin-bottom: var(--space-sm);
+  }
+
   .translator__textarea {
-    min-height: 100px;
+    flex: 1;
+    min-height: 0;
     font-size: 1rem;
+    resize: none;
   }
-  
+
   .translator__actions {
-    flex-direction: column;
+    margin-bottom: var(--space-sm);
   }
-  
-  .translator__button {
-    width: 100%;
+
+  .translator__copy-success {
+    min-height: 32px;
+    padding: var(--space-xs) var(--space-sm);
   }
 }
 
